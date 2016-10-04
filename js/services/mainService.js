@@ -25,4 +25,13 @@ angular.module('devmtnTravel').service('mainSrv', function(){
 
 
     }]
+    this.idFinder = function (ids, arr) {
+      this.bookedUrl = '';
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i].id == ids) {
+          this.bookedUrl = arr[i].image;
+          return arr[i];
+        }
+      }
+    }
 })
